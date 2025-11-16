@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Love For All Foundation — Home</title>
+
+  <!-- DESCRIPTION -->
+  <meta name="description" content="Love For All Foundation — children home in Rhonda slums - Barut. Appeals, mission, vision, projects and contact info." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <!-- Prefetch images -->
+  <link rel="preconnect" href="https://picsum.photos" />
+
+  <!-- STYLES -->
+  <style>
+    /* Swing Animation */
+    @keyframes swing {
+      0% { transform: rotate(-1deg); }
+      50% { transform: rotate(1deg); }
+      100% { transform: rotate(-1deg); }
+    }
+    .animate-swing {
+      animation: swing 6s ease-in-out infinite;
+    }
+
+    /* Scrolling Ticker */
+    @keyframes ticker {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-ticker {
+      animation: ticker 18s linear infinite;
+      display: inline-block;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+
+  <!-- PAGE WRAPPER -->
+  <div class="max-w-8xl px-4 sm:px-6 lg:px-8 mx-auto">
+
+    <!-- HEADER -->
+    <header class="py-6 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center 
+                    bg-gradient-to-r from-pink-500 to-rose-400 text-white font-bold">
+          LFA
+        </div>
+
+        <div>
+          <h1 class="text-xl font-semibold">Love For All Foundation</h1>
+          <p class="text-sm text-gray-500">Children home — Rhonda Slums, Barut, Kenya</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-4">
+        <a class="text-sm hover:text-rose-600" href="#appeals">Appeals</a>
+        <a class="text-sm hover:text-rose-600" href="#about">About</a>
+        <a class="text-sm hover:text-rose-600" href="#gallery">Gallery</a>
+        <a class="text-sm hover:text-rose-600" href="#contact">Contact</a>
+        <a class="px-3 py-2 bg-rose-500 text-white rounded-md text-sm shadow" href="#donate">Donate</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-gray-100">☰</button>
+    </header>
+
+    <!-- MOBILE NAV -->
+    <div id="mobile-menu" class="hidden md:hidden mb-4">
+      <div class="flex flex-col gap-2 border rounded p-3">
+        <a href="#appeals" class="text-sm">Appeals</a>
+        <a href="#about" class="text-sm">About</a>
+        <a href="#gallery" class="text-sm">Gallery</a>
+        <a href="#contact" class="text-sm">Contact</a>
+        <a href="#donate" class="text-sm">Donate</a>
+      </div>
+    </div>
+
+   <!-- HERO SECTION -->
+<section class="relative flex items-center justify-center text-center px-6 h-screen overflow-hidden">
+
+  <!-- IMAGE SLIDER -->
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div id="slider" class="w-full h-full flex transition-transform duration-700 ease-out">
+      <img src="images/hero.webp" class="w-full h-full object-cover" />
+      <img src="images/homephoto.jpg" class="w-full h-full object-cover" />
+      <img src="images/groupphoto.jpg" class="w-full h-full object-cover" />
+      <img src="images/school.jpg" class="w-full h-full object-cover" />
+    </div>
+  </div>
+  <div class="absolute inset-0 bg-black/40 -z-10"></div>
+  <!-- CONTENT -->
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
+      Love For All Foundation
+    </h1>
+    <p class="mt-4 text-white/90 text-base sm:text-lg md:text-xl font-light">
+      Giving hope. Building futures. Supporting vulnerable children in Rhonda Slums, Barut.
+    </p>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href="#donate"
+        class="px-6 py-3 bg-rose-600 text-white rounded-lg shadow-md text-base sm:text-lg font-semibold">
+        Support / Donate
+      </a>
+      <a href="#gallery"
+        class="px-6 py-3 bg-white text-gray-800 rounded-lg shadow text-base sm:text-lg font-medium">
+        View Gallery
+      </a>
+    </div>
+
+    <!-- NEWS TICKER -->
+    <div class="mt-8 bg-white/20 backdrop-blur-sm text-white p-3 rounded-md text-xs sm:text-sm overflow-hidden">
+      <div class="animate-ticker">
+        We housed 49 kids • 2 boys at university • Appeal to complete boys dormitory • Land balance Ksh 1.8M • Playground land cost Ksh 6.8M • Thank you partners.
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDER DOTS -->
+  <div class="absolute bottom-10 w-full flex justify-center gap-2">
+    <span class="dot w-3 h-3 rounded-full bg-white/40"></span>
+    <span class="dot w-3 h-3 rounded-full bg-white/40"></span>
+    <span class="dot w-3 h-3 rounded-full bg-white/40"></span>
+    <span class="dot w-3 h-3 rounded-full bg-white/40"></span>
+  </div>
+</section>
+
+<!-- SLIDER SCRIPT -->
+<script>
+  const slider = document.getElementById("slider");
+  const dots = document.querySelectorAll(".dot");
+  let index = 0;
+  const totalSlides = 4;
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("bg-white", i === index);
+      dot.classList.toggle("bg-white/40", i !== index);
+    });
+  }
+
+  setInterval(() => {
+    index = (index + 1) % totalSlides;
+    updateSlider();
+  }, 4500);
+
+  updateSlider();
+</script>
+
+<style>
+  @keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  .animate-ticker {
+    animation: ticker 18s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+  }
+</style>
+
+     <div class="w-full py-12 flex justify-center items-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 text-center">
+            Let's Support, Live, and Restore the Lost Hope
+        </h2>
+      </div>
+
+    <!-- ABOUT SECTION -->
+        <section id="about" class="w-full py-14">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-6">
+
+            <!-- LEFT IMAGE -->
+            <div class="w-full h-full">
+            <img src="images/IMG-20251115-WA0009.jpg" 
+                class="w-full h-96 lg:h-[500px] object-cover rounded-xl shadow-lg" 
+                alt="About Love For All">
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="space-y-5 lg:pr-10">
+            <h3 class="text-3xl font-bold text-gray-900">
+                About Love For All
+            </h3>
+
+            <p class="text-gray-700 leading-relaxed">
+                Love For All is a children's home based in Rhonda Slums – Barut, about 200 km 
+                northwest of Nairobi. We provide shelter, education, healthcare, clothing, and 
+                emotional support to vulnerable children. Our mission is to restore hope, protect 
+                childhood, and build a brighter future for every child we care for.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+                Through strong partnerships with the surrounding community, we continue to empower 
+                families, improve living conditions, and create long-term sustainable impact.
+            </p>
+
+            <!-- CALL TO ACTION -->
+            <div class="pt-3">
+                <a href="#donate" 
+                class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
+                Support Our Mission
+                </a>
+            </div>
+            </div>
+
+        </div>
+        </section>
+
+
+<!-- MISSION, VISION, OBJECTIVES SECTION -->
+<section 
+  id="mission-vision" 
+  class="w-full min-h-screen bg-cover bg-center relative"
+>
+  <!-- Overlay for readability -->
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-20 space-y-16 text-white">
+    
+    <!-- Section Heading -->
+    <div class="text-center">
+      <h2 class="text-4xl sm:text-5xl font-extrabold">
+        What Drives Us
+      </h2>
+    </div>
+
+    <!-- VISION & MISSION -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      
+      <!-- VISION LEFT -->
+      <div class="p-6 bg-white bg-opacity-90 text-gray-900 rounded-xl shadow-md">
+        <h3 class="text-2xl font-bold">Vision</h3>
+        <p class="mt-4">
+          To be a self-sustaining centre consisting of a children's home, school, university, training centres, hospital, library, playing field, and a place of worship.
+        </p>
+      </div>
+
+      <!-- MISSION RIGHT -->
+      <div class="p-6 bg-white bg-opacity-90 text-gray-900 rounded-xl shadow-md">
+        <h3 class="text-2xl font-bold">Mission</h3>
+        <p class="mt-4">
+          To provide orphaned and vulnerable children with home, love, shelter, education, and physical, mental, and spiritual nourishment — giving them hope for a bright future.
+        </p>
+      </div>
+    </div>
+
+    <!-- OBJECTIVES GRID -->
+    <div class="space-y-8">
+      <h3 class="text-3xl sm:text-4xl text-center font-bold">
+        Our Objectives
+      </h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 bg-pink-50 rounded-lg shadow text-gray-900">
+          <h4 class="font-semibold">i. Break Poverty Cycle</h4>
+          <p class="mt-2 text-sm">
+            Break the cycle of poverty in Nakuru slum areas.
+          </p>
+        </div>
+
+        <div class="p-6 bg-pink-50 rounded-lg shadow text-gray-900">
+          <h4 class="font-semibold">ii. Provide Complete Care</h4>
+          <p class="mt-2 text-sm">
+            Provide complete basics: physical, spiritual and emotional care.
+          </p>
+        </div>
+
+        <div class="p-6 bg-pink-50 rounded-lg shadow text-gray-900">
+          <h4 class="font-semibold">iii. Inspire Hope</h4>
+          <p class="mt-2 text-sm">
+            Give children hope and courage to face tomorrow.
+          </p>
+        </div>
+
+        <div class="p-6 bg-pink-50 rounded-lg shadow text-gray-900">
+          <h4 class="font-semibold">iv. Empower Children</h4>
+          <p class="mt-2 text-sm">
+            Ensure they can achieve despite their backgrounds.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- APPEALS SECTION -->
+<section id="appeals" class="min-h-screen flex flex-col justify-center py-12">
+  <div class="max-w-7xl mx-auto px-6 w-full space-y-8">
+    
+    <!-- SECTION HEADING / BLESSING QUOTE -->
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold italic text-gray-900 text-center">
+      Acts of kindness to the less fortunate are treasures of blessings in life.
+    </h2>
+
+    <!-- CONTENT & IMAGE GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
+      
+      <!-- CONTENT LEFT WITH PINK GRID BACKGROUND -->
+      <div class="p-6 bg-pink-50 rounded-xl shadow-md space-y-4 overflow-y-auto max-h-screen">
+        <h3 class="text-2xl font-bold text-gray-900">APPEALS</h3>
+        <ol class="list-decimal list-inside space-y-2 text-gray-700 text-sm">
+          <li>
+            <strong>Complete boys dormitory:</strong> We ask well-wishers to help as they did with the girls dormitory — we need 28 lower beds (lwrs) and construction support.
+          </li>
+          <li>
+            <strong>Land payment for school:</strong> We've paid Ksh 200,000. Remaining balance: <strong>Ksh 1,800,000</strong>. We also plan a playground; land owner asks Ksh 5,000,000. Total land target Ksh <strong>6,800,000</strong>.
+          </li>
+          <li>
+            <strong>Self-sustaining projects:</strong>
+            <ul class="list-disc ml-5 mt-1 text-gray-600">
+              <li>Rabbits</li>
+              <li>Chicken</li>
+              <li>Pigs</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Transport:</strong> We need a van to take children to school during heavy rains.
+          </li>
+        </ol>
+
+        <p class="text-gray-700 mt-2 text-sm">
+          We sincerely thank all our partners, well-wishers, and volunteers. Without you, we would not be where we are — we owe you so much in our hearts. <strong>LOVE FOR ALL FOUNDATION</strong>.
+        </p>
+
+        <!-- CALL TO ACTION BUTTON -->
+        <a href="#donate" class="inline-block mt-3 px-4 py-2 bg-pink-600 text-white font-semibold rounded-lg shadow hover:bg-pink-700 transition text-sm">
+          Support Our Cause
+        </a>
+      </div>
+
+      <!-- IMAGE RIGHT -->
+      <div class="flex justify-center items-center">
+        <img src="images/IMG-20251115-WA0027.jpg" alt="Appeals Image" class="rounded-xl shadow-lg w-full h-96 object-fit">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CHILDREN HOUSING & EDUCATION SECTION -->
+<section id="children" class="min-h-screen bg-gray-50 flex items-center py-12">
+  <div class="max-w-5xl mx-auto px-6 w-full grid grid-cols-1 gap-8 justify-items-center text-center">
+    
+    <!-- SECTION HEADING -->
+    <h2 class="text-3xl sm:text-4xl font-extrabold italic text-gray-900">
+      Meet Our Children
+    </h2>
+
+    <!-- HOUSING INFO BOX -->
+    <div class="p-6 bg-pink-50 rounded-xl shadow-md w-full">
+      <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+        Who We’re Caring For
+      </h3>
+      <p class="text-gray-700">
+        Right now, we’re caring for <strong>35 boys</strong> and <strong>14 girls</strong> aged 3 to 17 years. Every one of them is continuing their studies, and we’re proud of how far they’ve come. You’re helping change their story.
+      </p>
+    </div>
+
+    <!-- EDUCATION INFO BOX -->
+    <div class="p-6 bg-pink-50 rounded-xl shadow-md w-full">
+      <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+        Where They’re Learning
+      </h3>
+      <p class="text-gray-700 mb-2">
+        Let me tell you what’s happening with their education — it’s impressive!
+      </p>
+      <ol class="list-decimal ml-5 text-gray-700 space-y-1 text-sm text-left">
+        <li>Two boys at Egerton University (Law; BA)</li>
+        <li>One at Eldoret University (Counselling Psychology)</li>
+        <li>One at Pwani University (Biochemical Engineering)</li>
+        <li>One at Msambweni Medical Training College (Nursing)</li>
+        <li>One at RVIST (Diploma in Hospitality & Tourism)</li>
+        <li>One at Sigalagala (Building Technology)</li>
+        <li>One at Bukura Agricultural College</li>
+        <li>Fifteen in high schools, thirteen in primary, ten in nursery</li>
+      </ol>
+    </div>
+
+  </div>
+</section>
+<!-- TEAM & DONATE SECTION -->
+<section id="team-donate" class="min-h-screen bg-gray-50 flex flex-col lg:flex-row gap-6 p-6">
+
+  <!-- TEAM / LEFT -->
+  <aside class="flex-1 bg-black text-white p-6 rounded-xl shadow-md flex flex-col justify-center">
+    <h4 class="text-2xl font-semibold mb-4">Our Team</h4>
+    <div class="space-y-4 text-sm">
+      <div>
+        <p class="font-medium text-lg">Director</p>
+        <p class="text-gray-200">Bishop Pamela Ngesa — +254 725 766 101</p>
+      </div>
+      <div>
+        <p class="font-medium text-lg">Matron & Caretaker</p>
+        <p class="text-gray-200">Currently we employ a matron who also cooks and a caretaker/security man.</p>
+      </div>
+      <div>
+        <p class="text-gray-200">Future hires planned: nurse, separate cook</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- DONATE / RIGHT -->
+  <div class="flex-1 bg-white p-6 rounded-xl shadow-md flex flex-col justify-center">
+    <h4 class="text-2xl font-semibold mb-4">Donate</h4>
+    <p class="text-gray-700 text-sm">For donations & bank transfers:</p>
+    <ul class="mt-2 text-gray-800 text-sm space-y-1">
+      <li><strong>Account name:</strong> LFA EDUCATION ENDOWNMENT FOUNDATION</li>
+      <li><strong>Account number:</strong> 55050160001449</li>
+      <li><strong>Bank:</strong> United Bank of Africa (UBA)</li>
+      <li><strong>Contact (Director):</strong> Bishop Pamela Ngesa — +254 725 766 101</li>
+      <li><strong>Email:</strong> opamelangesa@yahoo.com</li>
+    </ul>
+    <div class="mt-4 sm:mt-6 w-full sm:w-48">
+      <a class="block text-center px-4 py-3 bg-rose-600 text-white font-semibold rounded-md hover:bg-rose-700 transition" href="#contact">
+        Contact / Confirm Donation
+      </a>
+    </div>
+  </div>
+
+</section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-10">
+      <h3 class="text-2xl font-semibold">Gallery</h3>
+      <p class="text-gray-600 mt-2">Click an image to view larger. (This demo uses placeholder images — replace data-src URLs with your real images.)</p>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-3 mt-4">
+        <button id="filter-all" class="px-3 py-2 bg-rose-600 text-white rounded text-sm">All</button>
+        <button id="filter-dorm" class="px-3 py-2 border rounded text-sm">Dormitory</button>
+        <button id="filter-field" class="px-3 py-2 border rounded text-sm">Trips & Events</button>
+        <div class="ml-auto text-sm text-gray-500">50+ images — some animated to save space & improve layout</div>
+      </div>
+
+      <!-- Grid -->
+
+      <p class="mt-4 text-sm text-gray-500">Tip: Replace each `data-src` with your actual image file path. Keep images compressed (webp or jpeg at 70-80% quality) to ensure fast loads.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 border rounded">
+          <h3 class="text-xl font-semibold">Contact & Donations</h3>
+          <p class="mt-3 text-gray-700">For further information, donations or to offer a hand, contact:</p>
+          <ul class="mt-3 text-gray-800 space-y-2">
+            <li><strong>Director:</strong> Bishop Pamela Ngesa</li>
+            <li><strong>Phone:</strong> +254 725 766 101</li>
+            <li><strong>Email:</strong> <a href="mailto:opamelangesa@yahoo.com" class="text-rose-600">opamelangesa@yahoo.com</a></li>
+            <li><strong>Bank:</strong> United Bank of Africa (UBA)</li>
+            <li><strong>A/C No:</strong> 55050160001449</li>
+            <li><strong>A/C Name:</strong> LFA EDUCATION ENDOWNMENT FOUNDATION</li>
+          </ul>
+        </div>
+
+        <div class="p-6 border rounded">
+          <h3 class="text-xl font-semibold">Send a message</h3>
+          <form id="contact-form" class="mt-4 grid gap-3">
+            <label class="text-sm">Your name <input required name="name" class="w-full border rounded p-2 text-sm" placeholder="Jane Doe" /></label>
+            <label class="text-sm">Your email <input required type="email" name="email" class="w-full border rounded p-2 text-sm" placeholder="you@example.com" /></label>
+            <label class="text-sm">Message <textarea required name="message" rows="4" class="w-full border rounded p-2 text-sm" placeholder="How can I help?"></textarea></label>
+            <div class="flex gap-3">
+              <button type="submit" class="px-4 py-2 bg-rose-600 text-white rounded">Send Message</button>
+              <button type="reset" class="px-4 py-2 border rounded">Reset</button>
+            </div>
+            <p id="form-status" class="text-sm text-gray-600 mt-2"></p>
+            <p class="text-xs text-gray-500 mt-2">Note: This is a static demo. Connect the form to your email or API endpoint when deploying.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t mt-8">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <p class="text-sm">&copy; <span id="year"></span> Love For All Foundation — All rights reserved.</p>
+          <p class="text-xs text-gray-500">Registered address: Rhonda Slums - Barut, Nakuru region, Kenya.</p>
+        </div>
+        <div class="text-sm">
+          <a class="mr-3 text-rose-600" href="mailto:opamelangesa@yahoo.com">opamelangesa@yahoo.com</a>
+          <span class="text-gray-400">|</span>
+          <a class="ml-3" href="#donate">Donate</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lightbox modal (simple) -->
+  <div id="lightbox" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4">
+    <div class="max-w-4xl w-full rounded bg-white overflow-hidden">
+      <div class="p-2 flex justify-end">
+        <button id="lightbox-close" class="px-3 py-1 rounded hover:bg-gray-100">Close</button>
+      </div>
+      <div class="p-2">
+        <img id="lightbox-img" src="" alt="Enlarged image" class="w-full h-auto object-contain">
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts (defer-like behavior) -->
+  <script>
+    // Small utility scripts: mobile menu, lazy-load images with IntersectionObserver, reveal animations, gallery filter, lightbox, contact form demo.
+    (function(){
+      // Mobile menu
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileBtn?.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+
+      // set year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Lazy load images & reveal animation
+      const images = new Set();
+      function observeImages() {
+        const opts = { root: null, rootMargin: '120px', threshold: 0.01 };
+        const io = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target.querySelector('img') || entry.target;
+              if (img && img.dataset && img.dataset.src) {
+                img.src = img.dataset.src;
+                img.addEventListener('load', () => {
+                  // remove placeholder overlay
+                  entry.target.classList.add('visible');
+                  entry.target.classList.remove('img-placeholder');
+                  // remove shimmer pseudo-element by clearing ::after via class
+                }, { once: true });
+                delete img.dataset.src;
+              } else if (img && img.tagName === 'IMG') {
+                // static img with src
+                entry.target.classList.add('visible');
+              }
+              obs.unobserve(entry.target);
+            }
+          });
+        }, opts);
+
+        // Observe figure wrappers and images without wrappers
+        document.querySelectorAll('.img-placeholder, figure.reveal, img[data-src]').forEach(el=>{
+          // if it's the img itself, observe its parent for better CSS transitions
+          const target = (el.tagName === 'IMG') ? el.parentElement || el : el;
+          if (target) io.observe(target);
+        });
+      }
+
+      // Run after small delay to allow gallery generation
+      document.addEventListener('DOMContentLoaded', () => {
+        // Move generated script's inserted elements into the gallery grid if not already
+        // (The generation already inserted directly before the script; ensure structure)
+        // Start observing after a microtask to let DOM stabilize
+        setTimeout(()=>{
+          observeImages();
+        }, 40);
+      });
+
+      // Reveal elements which are not image wrappers too
+      const revealObserver = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.08});
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // Gallery filtering
+      const grid = document.getElementById('gallery-grid');
+      document.getElementById('filter-all').addEventListener('click', ()=> {
+        document.querySelectorAll('#gallery-grid figure').forEach(f => f.style.display = '');
+      });
+      document.getElementById('filter-dorm').addEventListener('click', ()=> {
+        document.querySelectorAll('#gallery-grid figure').forEach(f => f.style.display = (f.dataset.category === 'dorm') ? '' : 'none');
+      });
+      document.getElementById('filter-field').addEventListener('click', ()=> {
+        document.querySelectorAll('#gallery-grid figure').forEach(f => f.style.display = (f.dataset.category === 'trip') ? '' : 'none');
+      });
+
+      // Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lbClose = document.getElementById('lightbox-close');
+
+      document.addEventListener('click', (e)=>{
+        const fig = e.target.closest('figure');
+        if (fig && fig.querySelector('img')) {
+          const img = fig.querySelector('img');
+          // if data-src still present (not loaded), use that; otherwise use src
+          const src = img.src || img.dataset.src || img.getAttribute('data-src');
+          if (!src) return;
+          lightboxImg.src = src;
+          lightbox.classList.remove('hidden');
+          lightbox.focus();
+        }
+      });
+      lbClose.addEventListener('click', ()=> { lightbox.classList.add('hidden'); lightboxImg.src='';});
+      lightbox.addEventListener('click', (e)=> { if (e.target === lightbox) { lightbox.classList.add('hidden'); lightboxImg.src=''; }});
+      document.addEventListener('keydown', (e)=> { if (e.key === 'Escape') { lightbox.classList.add('hidden'); lightboxImg.src=''; }});
+
+      // Contact form demo: this is static — add your form backend endpoint here
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      form?.addEventListener('submit', (ev) => {
+        ev.preventDefault();
+        status.textContent = 'Sending message... (demo - static site)';
+        // Simulate success
+        setTimeout(()=> {
+          status.textContent = 'Message recorded locally (demo). Connect the form to a server or service to forward messages.';
+          form.reset();
+        }, 700);
+      });
+
+    })();
+  </script>
+
+  <!-- Important: Replace placeholder image URLs with your optimized images (webp preferred). -->
+  <!-- Tips for performance:
+       1. Convert images to WebP and generate multiple sizes. Use <picture> with srcset for responsive images.
+       2. Keep images as small as possible and use `loading="lazy"` (already used).
+       3. Serve from a CDN or optimized static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages).
+       4. If you have 50+ images, paginate or collapse the gallery and lazy-load pages to reduce initial load.
+       5. Use real `alt` text for every image for accessibility and SEO.
+  -->
+</body>
+</html>
