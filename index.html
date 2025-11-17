@@ -57,63 +57,76 @@
       </div>
     </div>
 
-    <!-- HERO SPLIT SECTION -->
-    <section class="w-full h-[88vh] grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+<!-- HERO SPLIT SECTION -->
+<section class="w-full min-h-[90vh] grid grid-cols-1 md:grid-cols-2 overflow-hidden">
 
-      <!-- LEFT: IMAGES SLIDER -->
-      <div class="relative h-full w-full overflow-hidden">
-        <div id="slider" class="absolute inset-0 flex h-full w-full transition-transform duration-700 ease-out">
-          <img src="images/hero.webp" class="w-full h-full object-cover" />
-          <img src="images/homephoto.jpg" class="w-full h-full object-cover" />
-          <img src="images/groupphoto.jpg" class="w-full h-full object-cover" />
-          <img src="images/school.jpg" class="w-full h-full object-cover" />
-        </div>
+  <!-- LEFT: IMAGES SLIDER -->
+  <div class="relative h-64 md:h-full w-full overflow-hidden">
+    <div id="slider" class="absolute inset-0 flex h-full w-full transition-transform duration-700 ease-out">
+      <img src="images/hero.webp" class="w-full h-full object-cover" />
+      <img src="images/homephoto.jpg" class="w-full h-full object-cover" />
+      <img src="images/groupphoto.jpg" class="w-full h-full object-cover" />
+      <img src="images/school.jpg" class="w-full h-full object-cover" />
+    </div>
 
-        <!-- Dots -->
-        <div class="absolute bottom-4 w-full flex justify-center gap-2">
-          <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
-          <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
-          <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
-          <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
-        </div>
+    <!-- Dots -->
+    <div class="absolute bottom-3 w-full flex justify-center gap-2">
+      <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+      <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+      <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+      <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+    </div>
+  </div>
+
+<!-- RIGHT: CONTENT -->
+<div class="flex items-center justify-center bg-blue-500 text-white px-6 py-10 md:py-0">
+  <div class="w-full max-w-md md:max-w-lg mx-auto text-center md:text-left space-y-5 px-2 sm:px-4">
+
+    <h1 class="text-2xl md:text-4xl font-extrabold leading-tight drop-shadow">
+      Love For All Foundation
+    </h1>
+
+    <p class="text-lg text-white/90">
+      Giving hope. Building futures. Supporting vulnerable children in Rhonda Slums, Barut.
+    </p>
+
+    <p class="text-white/90">
+      For years, Love For All Foundation has taken in abandoned, orphaned, and at-risk children—offering them safety, 
+      education, love, and a chance to dream again. Our mission is to transform young lives and break cycles of poverty 
+      through sustainable support systems, mentorship, and community empowerment.
+    </p>
+
+    <p class="text-white/90">
+      Every contribution helps us expand our shelter, complete the boys’ dormitory, support education, and secure land 
+      for a safe playground. Together, we can rebuild destinies and restore lost hope.
+    </p>
+
+    <!-- Buttons -->
+    <div class="pt-4 flex flex-wrap justify-center md:justify-start gap-4">
+      <a href="#donate"
+        class="px-6 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition font-semibold">
+        Support / Donate
+      </a>
+
+      <a href="#gallery"
+        class="px-6 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition font-semibold">
+        View Gallery
+      </a>
+    </div>
+
+    <!-- News ticker -->
+    <div class="mt-6 bg-white/20 backdrop-blur text-sm p-3 rounded overflow-hidden">
+      <div class="animate-ticker">
+        We housed 49 kids • 2 boys at university • Appeal to complete boys dormitory • 
+        Land balance Ksh 1.8M • Playground land cost Ksh 6.8M • Thank you partners.
       </div>
-
-      <!-- RIGHT: CONTENT -->
-      <div class="flex items-center justify-center bg-blue-500 text-white px-8">
-        <div class="max-w-lg text-center md:text-left">
-          <h1 class="text-4xl md:text-4xl font-extrabold leading-tight drop-shadow">
-            Love For All Foundation
-          </h1>
-
-          <p class="mt-4 text-white/90 text-lg font-light">
-            Giving hope. Building futures. Supporting vulnerable children in Rhonda Slums, Barut.
-          </p>
-
-
-      <div class="mt-6 flex flex-wrap md:justify-start justify-center gap-4">
-        <a href="#donate"
-          class="px-6 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition font-semibold">
-          Support / Donate
-        </a>
-
-        <a href="#gallery"
-          class="px-6 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition font-semibold">
-          View Gallery
-        </a>
-      </div>
-
-          <div class="mt-8 bg-white/20 backdrop-blur text-sm p-3 rounded overflow-hidden">
-            <div class="animate-ticker">
-              We housed 49 kids • 2 boys at university • Appeal to complete boys dormitory • 
-              Land balance Ksh 1.8M • Playground land cost Ksh 6.8M • Thank you partners.
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
+    </div>
 
   </div>
+</div>
+
+
+</section>
 
   <!-- SLIDER SCRIPT -->
   <script>
