@@ -4,346 +4,316 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Love For All Foundation — Home</title>
+  <meta name="description" content="Love For All Foundation — children home in Rhonda slums - Barut." />
 
-  <!-- DESCRIPTION -->
-  <meta name="description" content="Love For All Foundation — children home in Rhonda slums - Barut. Appeals, mission, vision, projects and contact info." />
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Prefetch images -->
-  <link rel="preconnect" href="https://picsum.photos" />
-
-  <!-- STYLES -->
   <style>
-    /* Swing Animation */
-    @keyframes swing {
-      0% { transform: rotate(-1deg); }
-      50% { transform: rotate(1deg); }
-      100% { transform: rotate(-1deg); }
-    }
-    .animate-swing {
-      animation: swing 6s ease-in-out infinite;
-    }
+    @keyframes swing { 0%{transform:rotate(-1deg);}50%{transform:rotate(1deg);}100%{transform:rotate(-1deg);} }
+    .animate-swing { animation: swing 6s ease-in-out infinite; }
 
-    /* Scrolling Ticker */
-    @keyframes ticker {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-    .animate-ticker {
-      animation: ticker 18s linear infinite;
-      display: inline-block;
-      white-space: nowrap;
-    }
+    @keyframes ticker { 0%{transform:translateX(100%);}100%{transform:translateX(-100%);} }
+    .animate-ticker { animation: ticker 18s linear infinite; white-space: nowrap; display: inline-block; }
   </style>
 </head>
 
-<body class="antialiased text-gray-800 bg-white">
+<body class="antialiased text-gray-800 bg-blue-100">
 
   <!-- PAGE WRAPPER -->
-  <div class="max-w-8xl px-4 sm:px-6 lg:px-8 mx-auto">
+  <div class="w-full">
 
-    <!-- HEADER -->
-    <header class="py-6 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 rounded-lg flex items-center justify-center 
-                    bg-gradient-to-r from-pink-500 to-rose-400 text-white font-bold">
-          LFA
-        </div>
-
+    <!-- HEADER (reduced height) -->
+    <header class="py-2 flex items-center justify-between px-4 bg-white shadow-sm sticky top-0 z-50">
+      <div class="flex items-center gap-3">
+        <img src="images/logo.png" class="w-8 h-8 rounded-md shadow" />
         <div>
-          <h1 class="text-xl font-semibold">Love For All Foundation</h1>
-          <p class="text-sm text-gray-500">Children home — Rhonda Slums, Barut, Kenya</p>
+          <h1 class="text-base font-semibold leading-tight">Love For All Foundation</h1>
+          <p class="text-xs text-gray-500 -mt-1">Children Home — Rhonda Slums, Barut</p>
         </div>
       </div>
 
-      <nav class="hidden md:flex gap-4">
-        <a class="text-sm hover:text-rose-600" href="#appeals">Appeals</a>
-        <a class="text-sm hover:text-rose-600" href="#about">About</a>
-        <a class="text-sm hover:text-rose-600" href="#gallery">Gallery</a>
-        <a class="text-sm hover:text-rose-600" href="#contact">Contact</a>
-        <a class="px-3 py-2 bg-rose-500 text-white rounded-md text-sm shadow" href="#donate">Donate</a>
+      <nav class="hidden md:flex gap-4 text-sm">
+        <a class="hover:text-rose-600" href="#appeals">Appeals</a>
+        <a class="hover:text-rose-600" href="#about">About</a>
+        <a class="hover:text-rose-600" href="#gallery">Gallery</a>
+        <a class="hover:text-rose-600" href="#contact">Contact</a>
+        <a class="px-3 py-1 bg-rose-600 text-white rounded shadow hover:bg-rose-700" href="#donate">Donate</a>
       </nav>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-gray-100">☰</button>
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded hover:bg-gray-100">☰</button>
     </header>
 
     <!-- MOBILE NAV -->
-    <div id="mobile-menu" class="hidden md:hidden mb-4">
-      <div class="flex flex-col gap-2 border rounded p-3">
+    <div id="mobile-menu" class="hidden md:hidden px-4 py-2 bg-white shadow-sm">
+      <div class="flex flex-col gap-2">
         <a href="#appeals" class="text-sm">Appeals</a>
         <a href="#about" class="text-sm">About</a>
         <a href="#gallery" class="text-sm">Gallery</a>
         <a href="#contact" class="text-sm">Contact</a>
-        <a href="#donate" class="text-sm">Donate</a>
+        <a href="#donate" class="text-sm font-semibold text-rose-600">Donate</a>
       </div>
     </div>
 
-   <!-- HERO SECTION -->
-<section class="relative flex items-center justify-center text-center px-6 h-screen overflow-hidden">
+    <!-- HERO SPLIT SECTION -->
+    <section class="w-full h-[88vh] grid grid-cols-1 md:grid-cols-2 overflow-hidden">
 
-  <!-- IMAGE SLIDER -->
-  <div class="absolute inset-0 -z-10 overflow-hidden">
-    <div id="slider" class="w-full h-full flex transition-transform duration-700 ease-out">
-      <img src="images/hero.webp" class="w-full h-full object-cover" />
-      <img src="images/homephoto.jpg" class="w-full h-full object-cover" />
-      <img src="images/groupphoto.jpg" class="w-full h-full object-cover" />
-      <img src="images/school.jpg" class="w-full h-full object-cover" />
-    </div>
-  </div>
-  <div class="absolute inset-0 bg-black/40 -z-10"></div>
-  <!-- CONTENT -->
-  <div class="max-w-3xl mx-auto">
-    <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
-      Love For All Foundation
-    </h1>
-    <p class="mt-4 text-white/90 text-base sm:text-lg md:text-xl font-light">
-      Giving hope. Building futures. Supporting vulnerable children in Rhonda Slums, Barut.
-    </p>
-    <div class="mt-8 flex flex-wrap justify-center gap-4">
-      <a href="#donate"
-        class="px-6 py-3 bg-rose-600 text-white rounded-lg shadow-md text-base sm:text-lg font-semibold">
-        Support / Donate
-      </a>
-      <a href="#gallery"
-        class="px-6 py-3 bg-white text-gray-800 rounded-lg shadow text-base sm:text-lg font-medium">
-        View Gallery
-      </a>
-    </div>
-
-    <!-- NEWS TICKER -->
-    <div class="mt-8 bg-white/20 backdrop-blur-sm text-white p-3 rounded-md text-xs sm:text-sm overflow-hidden">
-      <div class="animate-ticker">
-        We housed 49 kids • 2 boys at university • Appeal to complete boys dormitory • Land balance Ksh 1.8M • Playground land cost Ksh 6.8M • Thank you partners.
-      </div>
-    </div>
-  </div>
-
-  <!-- SLIDER DOTS -->
-  <div class="absolute bottom-10 w-full flex justify-center gap-2">
-    <span class="dot w-3 h-3 rounded-full bg-white/40"></span>
-    <span class="dot w-3 h-3 rounded-full bg-white/40"></span>
-    <span class="dot w-3 h-3 rounded-full bg-white/40"></span>
-    <span class="dot w-3 h-3 rounded-full bg-white/40"></span>
-  </div>
-</section>
-
-<!-- SLIDER SCRIPT -->
-<script>
-  const slider = document.getElementById("slider");
-  const dots = document.querySelectorAll(".dot");
-  let index = 0;
-  const totalSlides = 4;
-
-  function updateSlider() {
-    slider.style.transform = `translateX(-${index * 100}%)`;
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("bg-white", i === index);
-      dot.classList.toggle("bg-white/40", i !== index);
-    });
-  }
-
-  setInterval(() => {
-    index = (index + 1) % totalSlides;
-    updateSlider();
-  }, 4500);
-
-  updateSlider();
-</script>
-
-<style>
-  @keyframes ticker {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-  .animate-ticker {
-    animation: ticker 18s linear infinite;
-    display: inline-block;
-    white-space: nowrap;
-  }
-</style>
-
-     <div class="w-full py-12 flex justify-center items-center">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 text-center">
-            Let's Support, Live, and Restore the Lost Hope
-        </h2>
-      </div>
-
-    <!-- ABOUT SECTION -->
-        <section id="about" class="w-full py-14">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-6">
-
-            <!-- LEFT IMAGE -->
-            <div class="w-full h-full">
-            <img src="images/IMG-20251115-WA0009.jpg" 
-                class="w-full h-96 lg:h-[500px] object-cover rounded-xl shadow-lg" 
-                alt="About Love For All">
-            </div>
-
-            <!-- RIGHT CONTENT -->
-            <div class="space-y-5 lg:pr-10">
-            <h3 class="text-3xl font-bold text-gray-900">
-                About Love For All
-            </h3>
-
-            <p class="text-gray-700 leading-relaxed">
-                Love For All is a children's home based in Rhonda Slums – Barut, about 200 km 
-                northwest of Nairobi. We provide shelter, education, healthcare, clothing, and 
-                emotional support to vulnerable children. Our mission is to restore hope, protect 
-                childhood, and build a brighter future for every child we care for.
-            </p>
-
-            <p class="text-gray-700 leading-relaxed">
-                Through strong partnerships with the surrounding community, we continue to empower 
-                families, improve living conditions, and create long-term sustainable impact.
-            </p>
-
-            <!-- CALL TO ACTION -->
-            <div class="pt-3">
-                <a href="#donate" 
-                class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
-                Support Our Mission
-                </a>
-            </div>
-            </div>
-
+      <!-- LEFT: IMAGES SLIDER -->
+      <div class="relative h-full w-full overflow-hidden">
+        <div id="slider" class="absolute inset-0 flex h-full w-full transition-transform duration-700 ease-out">
+          <img src="images/hero.webp" class="w-full h-full object-cover" />
+          <img src="images/homephoto.jpg" class="w-full h-full object-cover" />
+          <img src="images/groupphoto.jpg" class="w-full h-full object-cover" />
+          <img src="images/school.jpg" class="w-full h-full object-cover" />
         </div>
-        </section>
 
-
-<!-- MISSION, VISION, OBJECTIVES SECTION -->
-<section 
-  id="mission-vision" 
-  class="w-full min-h-screen bg-cover bg-center relative"
->
-  <!-- Overlay for readability -->
-  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 py-20 space-y-16 text-white">
-    
-    <!-- Section Heading -->
-    <div class="text-center">
-      <h2 class="text-4xl sm:text-5xl font-extrabold">
-        What Drives Us
-      </h2>
-    </div>
-
-    <!-- VISION & MISSION -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-      
-      <!-- VISION LEFT -->
-      <div class="p-6 bg-white bg-opacity-90 text-gray-900 rounded-xl shadow-md">
-        <h3 class="text-2xl font-bold">Vision</h3>
-        <p class="mt-4">
-          To be a self-sustaining centre consisting of a children's home, school, university, training centres, hospital, library, playing field, and a place of worship.
-        </p>
+        <!-- Dots -->
+        <div class="absolute bottom-4 w-full flex justify-center gap-2">
+          <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+          <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+          <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+          <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        </div>
       </div>
 
-      <!-- MISSION RIGHT -->
-      <div class="p-6 bg-white bg-opacity-90 text-gray-900 rounded-xl shadow-md">
-        <h3 class="text-2xl font-bold">Mission</h3>
-        <p class="mt-4">
-          To provide orphaned and vulnerable children with home, love, shelter, education, and physical, mental, and spiritual nourishment — giving them hope for a bright future.
-        </p>
-      </div>
-    </div>
+      <!-- RIGHT: CONTENT -->
+      <div class="flex items-center justify-center bg-blue-500 text-white px-8">
+        <div class="max-w-lg text-center md:text-left">
+          <h1 class="text-4xl md:text-4xl font-extrabold leading-tight drop-shadow">
+            Love For All Foundation
+          </h1>
 
-    <!-- OBJECTIVES GRID -->
-    <div class="space-y-8">
-      <h3 class="text-3xl sm:text-4xl text-center font-bold">
-        Our Objectives
-      </h3>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="p-6 bg-pink-50 rounded-lg shadow text-gray-900">
-          <h4 class="font-semibold">i. Break Poverty Cycle</h4>
-          <p class="mt-2 text-sm">
-            Break the cycle of poverty in Nakuru slum areas.
+          <p class="mt-4 text-white/90 text-lg font-light">
+            Giving hope. Building futures. Supporting vulnerable children in Rhonda Slums, Barut.
           </p>
-        </div>
 
-        <div class="p-6 bg-pink-50 rounded-lg shadow text-gray-900">
-          <h4 class="font-semibold">ii. Provide Complete Care</h4>
-          <p class="mt-2 text-sm">
-            Provide complete basics: physical, spiritual and emotional care.
-          </p>
-        </div>
 
-        <div class="p-6 bg-pink-50 rounded-lg shadow text-gray-900">
-          <h4 class="font-semibold">iii. Inspire Hope</h4>
-          <p class="mt-2 text-sm">
-            Give children hope and courage to face tomorrow.
-          </p>
-        </div>
+      <div class="mt-6 flex flex-wrap md:justify-start justify-center gap-4">
+        <a href="#donate"
+          class="px-6 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition font-semibold">
+          Support / Donate
+        </a>
 
-        <div class="p-6 bg-pink-50 rounded-lg shadow text-gray-900">
-          <h4 class="font-semibold">iv. Empower Children</h4>
-          <p class="mt-2 text-sm">
-            Ensure they can achieve despite their backgrounds.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- APPEALS SECTION -->
-<section id="appeals" class="min-h-screen flex flex-col justify-center py-12">
-  <div class="max-w-7xl mx-auto px-6 w-full space-y-8">
-    
-    <!-- SECTION HEADING / BLESSING QUOTE -->
-    <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold italic text-gray-900 text-center">
-      Acts of kindness to the less fortunate are treasures of blessings in life.
-    </h2>
-
-    <!-- CONTENT & IMAGE GRID -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
-      
-      <!-- CONTENT LEFT WITH PINK GRID BACKGROUND -->
-      <div class="p-6 bg-pink-50 rounded-xl shadow-md space-y-4 overflow-y-auto max-h-screen">
-        <h3 class="text-2xl font-bold text-gray-900">APPEALS</h3>
-        <ol class="list-decimal list-inside space-y-2 text-gray-700 text-sm">
-          <li>
-            <strong>Complete boys dormitory:</strong> We ask well-wishers to help as they did with the girls dormitory — we need 28 lower beds (lwrs) and construction support.
-          </li>
-          <li>
-            <strong>Land payment for school:</strong> We've paid Ksh 200,000. Remaining balance: <strong>Ksh 1,800,000</strong>. We also plan a playground; land owner asks Ksh 5,000,000. Total land target Ksh <strong>6,800,000</strong>.
-          </li>
-          <li>
-            <strong>Self-sustaining projects:</strong>
-            <ul class="list-disc ml-5 mt-1 text-gray-600">
-              <li>Rabbits</li>
-              <li>Chicken</li>
-              <li>Pigs</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Transport:</strong> We need a van to take children to school during heavy rains.
-          </li>
-        </ol>
-
-        <p class="text-gray-700 mt-2 text-sm">
-          We sincerely thank all our partners, well-wishers, and volunteers. Without you, we would not be where we are — we owe you so much in our hearts. <strong>LOVE FOR ALL FOUNDATION</strong>.
-        </p>
-
-        <!-- CALL TO ACTION BUTTON -->
-        <a href="#donate" class="inline-block mt-3 px-4 py-2 bg-pink-600 text-white font-semibold rounded-lg shadow hover:bg-pink-700 transition text-sm">
-          Support Our Cause
+        <a href="#gallery"
+          class="px-6 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition font-semibold">
+          View Gallery
         </a>
       </div>
 
-      <!-- IMAGE RIGHT -->
-      <div class="flex justify-center items-center">
-        <img src="images/IMG-20251115-WA0027.jpg" alt="Appeals Image" class="rounded-xl shadow-lg w-full h-96 object-fit">
+          <div class="mt-8 bg-white/20 backdrop-blur text-sm p-3 rounded overflow-hidden">
+            <div class="animate-ticker">
+              We housed 49 kids • 2 boys at university • Appeal to complete boys dormitory • 
+              Land balance Ksh 1.8M • Playground land cost Ksh 6.8M • Thank you partners.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- SLIDER SCRIPT -->
+  <script>
+    const slider = document.getElementById("slider");
+    const dots = document.querySelectorAll(".dot");
+    let index = 0;
+    const totalSlides = dots.length;
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.className = i === index
+          ? "dot w-3 h-3 rounded-full bg-white"
+          : "dot w-3 h-3 rounded-full bg-white/40";
+      });
+    }
+
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      updateSlider();
+    }, 4500);
+  </script>
+
+    <!-- SECTION: TEXT HEADING -->
+    <div class="w-full py-16 flex justify-center">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 text-center">
+        Let's Support, Live & Restore Lost Hope
+      </h2>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="w-full py-16">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <img src="images/IMG-20251115-WA0009.jpg"
+             class="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-lg"
+             alt="About Love For All">
+
+        <div class="space-y-5">
+          <h3 class="text-3xl font-bold text-gray-900">About Love For All</h3>
+
+          <p class="text-gray-700 leading-relaxed">
+            Love For All is a children's home based in Rhonda Slums – Barut, 200 km northwest of Nairobi.
+            We provide shelter, education, healthcare, and emotional support to vulnerable children.
+          </p>
+
+          <p class="text-gray-700 leading-relaxed">
+            Through strong community partnerships, we empower families, improve living conditions, and create long-term impact.
+          </p>
+
+          <a href="#donate" 
+             class="inline-block bg-rose-600 hover:bg-rose-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
+            Support Our Mission
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MISSIONS & OBJECTIVES -->
+    <section id="mission-vision" class="w-full min-h-screen bg-gray-900 text-white bg-cover bg-center py-20">
+      <div class="max-w-7xl mx-auto px-6 space-y-16">
+
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-center">
+          What Drives Us
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          
+          <div class="p-6 bg-white/90 text-gray-900 rounded-xl shadow">
+            <h3 class="text-2xl font-bold">Vision</h3>
+            <p class="mt-4">
+              A self-sustaining centre: children’s home, school, university, hospital,
+              library, playing field, and place of worship.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white/90 text-gray-900 rounded-xl shadow">
+            <h3 class="text-2xl font-bold">Mission</h3>
+            <p class="mt-4">
+              To provide orphaned and vulnerable children with love, shelter,
+              education and spiritual nourishment for a bright future.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="space-y-6">
+          <h3 class="text-3xl sm:text-4xl text-center font-bold">Our Objectives</h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 bg-rose-50 rounded-xl shadow text-gray-900">
+              <h4 class="font-semibold">i. Break Poverty</h4>
+              <p class="mt-2 text-sm">Break the cycle of poverty in Nakuru slum areas.</p>
+            </div>
+
+            <div class="p-6 bg-rose-50 rounded-xl shadow text-gray-900">
+              <h4 class="font-semibold">ii. Provide Complete Care</h4>
+              <p class="mt-2 text-sm">Offer spiritual, emotional and physical care.</p>
+            </div>
+
+            <div class="p-6 bg-rose-50 rounded-xl shadow text-gray-900">
+              <h4 class="font-semibold">iii. Inspire Hope</h4>
+              <p class="mt-2 text-sm">Give children hope and courage for tomorrow.</p>
+            </div>
+
+            <div class="p-6 bg-rose-50 rounded-xl shadow text-gray-900">
+              <h4 class="font-semibold">iv. Empower Children</h4>
+              <p class="mt-2 text-sm">Ensure they can succeed despite their backgrounds.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!-- APPEALS SECTION -->
+<section id="appeals" class="min-h-screen py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 space-y-7">
+
+    <!-- HEADING / QUOTE -->
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900">
+        Acts of kindness may seem small, but they become the greatest blessings in someone’s life.
+      </h2>
+      <p class="mt-4 text-gray-600 text-sm sm:text-base">
+        At Love For All Foundation, every helping hand restores hope and transforms the future of a child.
+      </p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+      <!-- LEFT CONTENT -->
+      <div class="p-8 bg-white rounded-2xl shadow space-y-6">
+        <h3 class="text-3xl font-bold text-gray-900">Our Current Appeals</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          We invite kind-hearted individuals, families, and organizations to stand with us as we work to create
+          a safe, dignified, and hopeful environment for the children under our care.
+        </p>
+
+        <ul class="space-y-4 text-gray-700 text-sm leading-relaxed">
+
+          <li class="border-b pb-3">
+            <span class="font-semibold text-gray-900">1. Completion of Boys Dormitory</span><br>
+            We successfully completed the girls' dormitory through the generosity of well-wishers.
+            We now seek support for the boys' dormitory, including 28 lower beds and remaining construction work.
+          </li>
+
+          <li class="border-b pb-3">
+            <span class="font-semibold text-gray-900">2. Land Purchase for School & Playground</span><br>
+            We have already paid <strong>Ksh 200,000</strong> toward the land that will host our school.
+            The remaining balance is <strong>Ksh 1,800,000</strong>.  
+            Additionally, we aim to acquire land for a children’s playground (Ksh <strong>5,000,000</strong>),  
+            bringing the total target to <strong>Ksh 6,800,000</strong>.
+          </li>
+
+          <li class="border-b pb-3">
+            <span class="font-semibold text-gray-900">3. Self-Sustaining Community Projects</span><br>
+            To reduce long-term dependency, we are developing projects such as:
+            <ul class="list-disc ml-6 mt-1 text-gray-600">
+              <li>Rabbit farming</li>
+              <li>Poultry keeping</li>
+              <li>Pig rearing</li>
+            </ul>
+          </li>
+
+          <li class="border-b pb-3">
+            <span class="font-semibold text-gray-900">4. Transport Support</span><br>
+            During rainy seasons, some children struggle to reach school.
+            We are appealing for a van to improve safety and accessibility.
+          </li>
+
+        </ul>
+
+        <p class="text-gray-700 text-sm">
+          We remain deeply grateful to all our partners, donors, and volunteers.  
+          Your support keeps our mission alive — and brings hope where it is needed most.
+        </p>
+
+        <!-- CTA -->
+        <a href="#donate"
+           class="inline-block px-6 py-3 bg-rose-600 text-white text-sm font-semibold rounded-lg shadow hover:bg-rose-700 transition">
+          Support Our Mission
+        </a>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="flex items-center justify-center">
+        <img
+          src="images/IMG-20251115-WA0027.jpg"
+          alt="Support Appeal Image"
+          class="rounded-xl shadow-lg w-full h-100 object-cover"
+        >
       </div>
 
     </div>
   </div>
 </section>
+
 
 <!-- CHILDREN HOUSING & EDUCATION SECTION -->
 <section id="children" class="min-h-screen bg-gray-50 flex items-center py-12">
@@ -506,9 +476,8 @@
     </div>
   </div>
 
-  <!-- Scripts (defer-like behavior) -->
   <script>
-    // Small utility scripts: mobile menu, lazy-load images with IntersectionObserver, reveal animations, gallery filter, lightbox, contact form demo.
+  
     (function(){
       // Mobile menu
       const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -551,12 +520,7 @@
           if (target) io.observe(target);
         });
       }
-
-      // Run after small delay to allow gallery generation
       document.addEventListener('DOMContentLoaded', () => {
-        // Move generated script's inserted elements into the gallery grid if not already
-        // (The generation already inserted directly before the script; ensure structure)
-        // Start observing after a microtask to let DOM stabilize
         setTimeout(()=>{
           observeImages();
         }, 40);
@@ -594,7 +558,6 @@
         const fig = e.target.closest('figure');
         if (fig && fig.querySelector('img')) {
           const img = fig.querySelector('img');
-          // if data-src still present (not loaded), use that; otherwise use src
           const src = img.src || img.dataset.src || img.getAttribute('data-src');
           if (!src) return;
           lightboxImg.src = src;
@@ -605,8 +568,6 @@
       lbClose.addEventListener('click', ()=> { lightbox.classList.add('hidden'); lightboxImg.src='';});
       lightbox.addEventListener('click', (e)=> { if (e.target === lightbox) { lightbox.classList.add('hidden'); lightboxImg.src=''; }});
       document.addEventListener('keydown', (e)=> { if (e.key === 'Escape') { lightbox.classList.add('hidden'); lightboxImg.src=''; }});
-
-      // Contact form demo: this is static — add your form backend endpoint here
       const form = document.getElementById('contact-form');
       const status = document.getElementById('form-status');
       form?.addEventListener('submit', (ev) => {
@@ -621,14 +582,5 @@
 
     })();
   </script>
-
-  <!-- Important: Replace placeholder image URLs with your optimized images (webp preferred). -->
-  <!-- Tips for performance:
-       1. Convert images to WebP and generate multiple sizes. Use <picture> with srcset for responsive images.
-       2. Keep images as small as possible and use `loading="lazy"` (already used).
-       3. Serve from a CDN or optimized static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages).
-       4. If you have 50+ images, paginate or collapse the gallery and lazy-load pages to reduce initial load.
-       5. Use real `alt` text for every image for accessibility and SEO.
-  -->
 </body>
 </html>
